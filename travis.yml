@@ -3,8 +3,8 @@ rvm:
   - 2.4.5
 before_script:
   - gem install bundler
-  - bundle install
-  - rails g rspec:install
-  - rails db:{drop,create,migrate}
+  - bundle exec install
 script:
-  - rspec
+  - bundle exec rails g rspec:install
+  - bundle exec rails db:{drop,create,migrate}
+  - bundle exec rspec
