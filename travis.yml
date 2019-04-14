@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+  - 2.4.5
+before_script:
+  - gem install bundler
+  - bundle install
+  - rails g rspec:install
+  - rake db:{drop,create,migrate}
+script:
+  - rspec
