@@ -5,6 +5,6 @@ before_script:
   - gem install bundler
   - bundle install
   - rails g rspec:install
-  - rake db:{drop,create,migrate}
+  - rails db:{drop,create,migrate}
 script:
   - rspec
