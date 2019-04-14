@@ -2,7 +2,9 @@ require 'rails_helper'
 
 describe "API Homepage" do
   it "can navigate to the homepage" do
-    create_list(:dog, 3)
+    Dog.create(breed: "Bulldog")
+    Dog.create(breed: "Labrador")
+    Dog.create(breed: "Greyhound")
 
     get '/api/v1/dogs'
 
