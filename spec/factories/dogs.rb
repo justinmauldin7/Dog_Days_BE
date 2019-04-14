@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :dog do
-    name { "Rover" }
+    breed { "Bulldog" }
   end
 end
