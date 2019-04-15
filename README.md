@@ -10,13 +10,13 @@ Dog Days is a Mod4 take home challenge project at [Turing School of Software & D
 
 
 #### Dog Days Production Links:
-Live App: https://wellthwater.herokuapp.com/
+Live App:
 
-Backend API: http://wellth-water.herokuapp.com/
+Backend API: https://dog-days-api.herokuapp.com/api/v1/dogs
 
 
 #### Dog Days Github Repositories:
-Frontend: https://github.com/shannonmoranetz/Dog_Days_FE
+Frontend: https://github.com/justinmauldin7/Dog_Days_FE
 
 Backend: https://github.com/justinmauldin7/Dog_Days_BE
 
@@ -129,7 +129,7 @@ To deploy this app through Heroku as we have, you can follow these [instructions
 
 If contributing to the backend repository, you can submit a pull request [here](https://github.com/justinmauldin7/Dog_Days_BE).
 
-If contributing to the frontend repository, you can submit a pull request [here](https://github.com/shannonmoranetz/Dog_Days_FE).
+If contributing to the frontend repository, you can submit a pull request [here](https://github.com/justinmauldin7/Dog_Days_FE).
 
 I will review the request and merge it into master if it is approved.
 
