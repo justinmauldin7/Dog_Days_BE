@@ -26,4 +26,16 @@ describe "API Homepage" do
     expect(dog.breed).to eq(breed)
     expect(dog.image).to eq(image)
   end
+
+  it "can delete a dog" do
+  dog = Dog.create(breed: "Labrador", image: "https://images.dog.ceo/breeds/labrador/n02099712_6901.jpg")
+
+  expect(Dog.count).to eq(1)
+
+  delete "/api/v1/dogs/#{dog.id}"
+
+  expect(response).to be_successful
+  expect(Dog.count).to eq(0)
+  expect{Dog.find(dog.id)}.to raise_error(ActiveRecord::RecordNotFound)
+end
 end
