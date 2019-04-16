@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Dog.create(breed: "Bulldog")
-Dog.create(breed: "Labrador")
-Dog.create(breed: "Greyhound")
+Dog.create(breed: "Labrador", image: "https://images.dog.ceo/breeds/labrador/n02099712_6901.jpg")
+Dog.create(breed: "Labrador", image: "https://images.dog.ceo/breeds/labrador/n02099712_8051.jpg")
+Dog.create(breed: "Labrador", image: "https://images.dog.ceo/breeds/labrador/n02099712_7411.jpg")
+Dog.create(breed: "Beagle", image: "https://images.dog.ceo/breeds/beagle/n02088364_12124.jpg")
+Dog.create(breed: "Pug", image: "https://images.dog.ceo/breeds/pug/n02110958_13439.jpg")
+Dog.create(breed: "Pug", image: "https://images.dog.ceo/breeds/pug/n02110958_14594.jpg")

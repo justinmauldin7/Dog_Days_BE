@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2019_04_14_052941) do
 
   create_table "dogs", force: :cascade do |t|
     t.string "breed"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

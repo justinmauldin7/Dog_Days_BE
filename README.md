@@ -10,13 +10,13 @@ Dog Days is a Mod4 take home challenge project at [Turing School of Software & D
 
 
 #### Dog Days Production Links:
-Live App: https://wellthwater.herokuapp.com/
+Live App:
 
-Backend API: http://wellth-water.herokuapp.com/
+Backend API: https://dog-days-api.herokuapp.com/api/v1/dogs
 
 
 #### Dog Days Github Repositories:
-Frontend: https://github.com/shannonmoranetz/Dog_Days_FE
+Frontend: https://github.com/justinmauldin7/Dog_Days_FE
 
 Backend: https://github.com/justinmauldin7/Dog_Days_BE
 
@@ -35,23 +35,74 @@ GET /api/v1/dogs
 [
     {
         "id": 1,
-        "breed": "Bulldog",
-        "created_at": "2019-04-14T21:30:05.656Z",
-        "updated_at": "2019-04-14T21:30:05.656Z"
+        "breed": "Labrador",
+        "image": "https://images.dog.ceo/breeds/labrador/n02099712_6901.jpg",
+        "created_at": "2019-04-16T18:39:53.610Z",
+        "updated_at": "2019-04-16T18:39:53.610Z"
     },
     {
         "id": 2,
         "breed": "Labrador",
-        "created_at": "2019-04-14T21:30:05.673Z",
-        "updated_at": "2019-04-14T21:30:05.673Z"
+        "image": "https://images.dog.ceo/breeds/labrador/n02099712_8051.jpg",
+        "created_at": "2019-04-16T18:39:53.617Z",
+        "updated_at": "2019-04-16T18:39:53.617Z"
     },
     {
         "id": 3,
-        "breed": "Greyhound",
-        "created_at": "2019-04-14T21:30:05.678Z",
-        "updated_at": "2019-04-14T21:30:05.678Z"
+        "breed": "Labrador",
+        "image": "https://images.dog.ceo/breeds/labrador/n02099712_7411.jpg",
+        "created_at": "2019-04-16T18:39:53.618Z",
+        "updated_at": "2019-04-16T18:39:53.618Z"
+    },
+    {
+        "id": 4,
+        "breed": "Beagle",
+        "image": "https://images.dog.ceo/breeds/beagle/n02088364_12124.jpg",
+        "created_at": "2019-04-16T18:39:53.620Z",
+        "updated_at": "2019-04-16T18:39:53.620Z"
+    },
+    {
+        "id": 5,
+        "breed": "Pug",
+        "image": "https://images.dog.ceo/breeds/pug/n02110958_13439.jpg",
+        "created_at": "2019-04-16T18:39:53.621Z",
+        "updated_at": "2019-04-16T18:39:53.621Z"
+    },
+    {
+        "id": 6,
+        "breed": "Pug",
+        "image": "https://images.dog.ceo/breeds/pug/n02110958_14594.jpg",
+        "created_at": "2019-04-16T18:39:53.623Z",
+        "updated_at": "2019-04-16T18:39:53.623Z"
     }
 ]
+```
+
+##### Create a Dog:
+You will need to pass in the params of "breed" & "image" into the URL to create a dog successfully.
+
+```
+POST /api/v1/dogs?breed=Labrador&image=https://images.dog.ceo/breeds/labrador/n02099712_6901.jpg
+
+{
+    "id": 7,
+    "breed": "Labrador",
+    "image": "https://images.dog.ceo/breeds/labrador/n02099712_6901.jpg",
+    "created_at": "2019-04-16T18:15:00.127Z",
+    "updated_at": "2019-04-16T18:15:00.127Z"
+}
+```
+
+##### Delete a Dog:
+You will need to pass in the id number of the dog you are wanting to delete.  
+*(In this example, we are passing in the id "7" and deleting the dog with id number 7.)*
+
+```
+DELETE /api/v1/dogs/7
+
+{
+    "success": "Dog id number 7 has been deleted"
+}
 ```
 
 
@@ -129,7 +180,7 @@ To deploy this app through Heroku as we have, you can follow these [instructions
 
 If contributing to the backend repository, you can submit a pull request [here](https://github.com/justinmauldin7/Dog_Days_BE).
 
-If contributing to the frontend repository, you can submit a pull request [here](https://github.com/shannonmoranetz/Dog_Days_FE).
+If contributing to the frontend repository, you can submit a pull request [here](https://github.com/justinmauldin7/Dog_Days_FE).
 
 I will review the request and merge it into master if it is approved.
 
