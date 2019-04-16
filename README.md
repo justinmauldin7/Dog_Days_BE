@@ -93,6 +93,18 @@ POST /api/v1/dogs?breed=Labrador&image=https://images.dog.ceo/breeds/labrador/n0
 }
 ```
 
+##### Delete a Dog:
+You will need to pass in the id number of the dog you are wanting to delete.  
+*(In this example, we are passing in the id "7" and deleting the dog with id number 7.)*
+
+```
+DELETE /api/v1/dogs/7
+
+{
+    "success": "Dog id number 7 has been deleted"
+}
+```
+
 
 ## Getting Started
 
