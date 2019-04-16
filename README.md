@@ -35,21 +35,45 @@ GET /api/v1/dogs
 [
     {
         "id": 1,
-        "breed": "Bulldog",
-        "created_at": "2019-04-14T21:30:05.656Z",
-        "updated_at": "2019-04-14T21:30:05.656Z"
+        "breed": "Labrador",
+        "image": "https://images.dog.ceo/breeds/labrador/n02099712_6901.jpg",
+        "created_at": "2019-04-16T18:39:53.610Z",
+        "updated_at": "2019-04-16T18:39:53.610Z"
     },
     {
         "id": 2,
         "breed": "Labrador",
-        "created_at": "2019-04-14T21:30:05.673Z",
-        "updated_at": "2019-04-14T21:30:05.673Z"
+        "image": "https://images.dog.ceo/breeds/labrador/n02099712_8051.jpg",
+        "created_at": "2019-04-16T18:39:53.617Z",
+        "updated_at": "2019-04-16T18:39:53.617Z"
     },
     {
         "id": 3,
-        "breed": "Greyhound",
-        "created_at": "2019-04-14T21:30:05.678Z",
-        "updated_at": "2019-04-14T21:30:05.678Z"
+        "breed": "Labrador",
+        "image": "https://images.dog.ceo/breeds/labrador/n02099712_7411.jpg",
+        "created_at": "2019-04-16T18:39:53.618Z",
+        "updated_at": "2019-04-16T18:39:53.618Z"
+    },
+    {
+        "id": 4,
+        "breed": "Beagle",
+        "image": "https://images.dog.ceo/breeds/beagle/n02088364_12124.jpg",
+        "created_at": "2019-04-16T18:39:53.620Z",
+        "updated_at": "2019-04-16T18:39:53.620Z"
+    },
+    {
+        "id": 5,
+        "breed": "Pug",
+        "image": "https://images.dog.ceo/breeds/pug/n02110958_13439.jpg",
+        "created_at": "2019-04-16T18:39:53.621Z",
+        "updated_at": "2019-04-16T18:39:53.621Z"
+    },
+    {
+        "id": 6,
+        "breed": "Pug",
+        "image": "https://images.dog.ceo/breeds/pug/n02110958_14594.jpg",
+        "created_at": "2019-04-16T18:39:53.623Z",
+        "updated_at": "2019-04-16T18:39:53.623Z"
     }
 ]
 ```
@@ -61,7 +85,7 @@ You will need to pass in the params of "breed" & "image" into the URL to create 
 POST /api/v1/dogs?breed=Labrador&image=https://images.dog.ceo/breeds/labrador/n02099712_6901.jpg
 
 {
-    "id": 6,
+    "id": 7,
     "breed": "Labrador",
     "image": "https://images.dog.ceo/breeds/labrador/n02099712_6901.jpg",
     "created_at": "2019-04-16T18:15:00.127Z",
