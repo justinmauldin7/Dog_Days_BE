@@ -28,14 +28,14 @@ describe "API Homepage" do
   end
 
   it "can delete a dog" do
-  dog = Dog.create(breed: "Labrador", image: "https://images.dog.ceo/breeds/labrador/n02099712_6901.jpg")
+    dog = Dog.create(breed: "Labrador", image: "https://images.dog.ceo/breeds/labrador/n02099712_6901.jpg")
 
-  expect(Dog.count).to eq(1)
+    expect(Dog.count).to eq(1)
 
-  delete "/api/v1/dogs/#{dog.id}"
+    delete "/api/v1/dogs/#{dog.id}"
 
-  expect(response).to be_successful
-  expect(Dog.count).to eq(0)
-  expect{Dog.find(dog.id)}.to raise_error(ActiveRecord::RecordNotFound)
-end
+    expect(response).to be_successful
+    expect(Dog.count).to eq(0)
+    expect{Dog.find(dog.id)}.to raise_error(ActiveRecord::RecordNotFound)
+  end
 end
