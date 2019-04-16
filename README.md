@@ -54,6 +54,21 @@ GET /api/v1/dogs
 ]
 ```
 
+##### Create a Dog:
+You will need to pass in the params of "breed" & "image" into the URL to create a dog successfully.
+
+```
+POST /api/v1/dogs?breed=Labrador&image=https://images.dog.ceo/breeds/labrador/n02099712_6901.jpg
+
+{
+    "id": 6,
+    "breed": "Labrador",
+    "image": "https://images.dog.ceo/breeds/labrador/n02099712_6901.jpg",
+    "created_at": "2019-04-16T18:15:00.127Z",
+    "updated_at": "2019-04-16T18:15:00.127Z"
+}
+```
+
 
 ## Getting Started
 
