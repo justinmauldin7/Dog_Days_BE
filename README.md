@@ -27,7 +27,23 @@ https://github.com/justinmauldin7/Dog_Days_BE/projects/1
 
 ## Dog Days API Endpoints:
 
-##### Get All Dogs for a specific user:
+##### Create a User:
+You will need to pass in the params of "name", "email", "password" & "password_confirmation" into the URL to create a user successfully.
+
+```
+POST api/v1/users?name=Justin&email=justin@email.com&password=password&password_confirmation=password
+
+{
+    "id": 1,
+    "name": "Justin",
+    "email": "justin@email.com",
+    "password_digest": "$2a$10$c2y3B4moPDfBRd48/j26t.W3ecROnpLOjoYoA.Wh5TXngdr6GIINK",
+    "created_at": "2019-04-17T05:29:44.978Z",
+    "updated_at": "2019-04-17T05:29:44.978Z"
+}
+```
+
+##### Get All Dogs for a Specific User:
 
 ```
 GET /api/v1/dogs?user_id=1
@@ -84,7 +100,7 @@ GET /api/v1/dogs?user_id=1
 ]
 ```
 
-##### Create a Dog for a user:
+##### Create a Dog for a User:
 You will need to pass in the params of "user_id", "breed" & "image" into the URL to create a dog successfully.
 
 ```
@@ -100,9 +116,9 @@ POST /api/v1/dogs?user_id=1&breed=Labrador&image=https://images.dog.ceo/breeds/l
 }
 ```
 
-##### Delete a Dog for a user:
+##### Delete a Dog for a User:
 You will need to pass in the id number of the dog you are wanting to delete, as well as, your user id.  
-*(In this example, we are passing in the id "7" and deleting the dog with id number 7.)*
+*(In this example, we are passing in the id "7" and deleting the dog with id number 7 from user 1.)*
 
 ```
 DELETE /api/v1/dogs/7?user_id=1
