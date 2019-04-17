@@ -27,14 +27,15 @@ https://github.com/justinmauldin7/Dog_Days_BE/projects/1
 
 ## Dog Days API Endpoints:
 
-##### Get All Dogs:
+##### Get All Dogs for a specific user:
 
 ```
-GET /api/v1/dogs
+GET /api/v1/dogs?user_id=1
 
 [
     {
         "id": 1,
+        "user_id": 1,
         "breed": "Labrador",
         "image": "https://images.dog.ceo/breeds/labrador/n02099712_6901.jpg",
         "created_at": "2019-04-16T18:39:53.610Z",
@@ -42,6 +43,7 @@ GET /api/v1/dogs
     },
     {
         "id": 2,
+        "user_id": 1,
         "breed": "Labrador",
         "image": "https://images.dog.ceo/breeds/labrador/n02099712_8051.jpg",
         "created_at": "2019-04-16T18:39:53.617Z",
@@ -49,6 +51,7 @@ GET /api/v1/dogs
     },
     {
         "id": 3,
+        "user_id": 1,
         "breed": "Labrador",
         "image": "https://images.dog.ceo/breeds/labrador/n02099712_7411.jpg",
         "created_at": "2019-04-16T18:39:53.618Z",
@@ -56,6 +59,7 @@ GET /api/v1/dogs
     },
     {
         "id": 4,
+        "user_id": 1,
         "breed": "Beagle",
         "image": "https://images.dog.ceo/breeds/beagle/n02088364_12124.jpg",
         "created_at": "2019-04-16T18:39:53.620Z",
@@ -63,6 +67,7 @@ GET /api/v1/dogs
     },
     {
         "id": 5,
+        "user_id": 1,
         "breed": "Pug",
         "image": "https://images.dog.ceo/breeds/pug/n02110958_13439.jpg",
         "created_at": "2019-04-16T18:39:53.621Z",
@@ -70,6 +75,7 @@ GET /api/v1/dogs
     },
     {
         "id": 6,
+        "user_id": 1,
         "breed": "Pug",
         "image": "https://images.dog.ceo/breeds/pug/n02110958_14594.jpg",
         "created_at": "2019-04-16T18:39:53.623Z",
@@ -78,14 +84,15 @@ GET /api/v1/dogs
 ]
 ```
 
-##### Create a Dog:
-You will need to pass in the params of "breed" & "image" into the URL to create a dog successfully.
+##### Create a Dog for a user:
+You will need to pass in the params of "user_id", "breed" & "image" into the URL to create a dog successfully.
 
 ```
-POST /api/v1/dogs?breed=Labrador&image=https://images.dog.ceo/breeds/labrador/n02099712_6901.jpg
+POST /api/v1/dogs?user_id=1&breed=Labrador&image=https://images.dog.ceo/breeds/labrador/n02099712_6901.jpg
 
 {
     "id": 7,
+    "user_id": 1,
     "breed": "Labrador",
     "image": "https://images.dog.ceo/breeds/labrador/n02099712_6901.jpg",
     "created_at": "2019-04-16T18:15:00.127Z",
@@ -93,15 +100,15 @@ POST /api/v1/dogs?breed=Labrador&image=https://images.dog.ceo/breeds/labrador/n0
 }
 ```
 
-##### Delete a Dog:
-You will need to pass in the id number of the dog you are wanting to delete.  
+##### Delete a Dog for a user:
+You will need to pass in the id number of the dog you are wanting to delete, as well as, your user id.  
 *(In this example, we are passing in the id "7" and deleting the dog with id number 7.)*
 
 ```
-DELETE /api/v1/dogs/7
+DELETE /api/v1/dogs/7?user_id=1
 
 {
-    "success": "Dog id number 7 has been deleted"
+    "success": "Dog id number 8 has been deleted from user_id 1"
 }
 ```
 
