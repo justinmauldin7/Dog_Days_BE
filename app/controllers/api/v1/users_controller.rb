@@ -10,4 +10,13 @@ class Api::V1::UsersController < ApplicationController
       render json: {error: "401 Unauthorized"}, status: 401
     end
   end
+
+  def index
+    user = User.find_by(email: params[:email])
+    if user
+      render json: user
+    else
+      render json: {error: "401 Unauthorized"}, status: 401
+    end
+  end
 end
