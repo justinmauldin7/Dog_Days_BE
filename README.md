@@ -25,6 +25,10 @@ Backend: https://github.com/justinmauldin7/Dog_Days_BE
 https://github.com/justinmauldin7/Dog_Days_BE/projects/1
 
 
+## Database Schema:
+
+![Image description](https://imgur.com/ElVYXRc.jpg)
+
 
 ## Dog Days API Endpoints:
 
