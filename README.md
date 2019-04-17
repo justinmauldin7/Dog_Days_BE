@@ -2,15 +2,16 @@
 
 [![Build Status](https://travis-ci.com/justinmauldin7/Dog_Days_BE.svg?branch=master)](https://travis-ci.com/justinmauldin7/Dog_Days_BE)
 
+![Dashboard](https://imgur.com/h9Wtgum.jpg)
 
-Dog Days is a Mod4 take home challenge project at [Turing School of Software & Design](https://turing.io/) where one student with 6 months experience in software development has 3 days to create an app using the dogs.ceo API.
 
-![Current Version](.jpg)
+Dog Days is a Mod4 take home challenge project at [Turing School of Software & Design](https://turing.io/) where one student with 6 months experience in software development has 3 days to create an app using the [Dog API](https://dog.ceo/dog-api/).
 
+This is the backend API that is built as a micro service to create, show & delete users & favorites from the Dog Days frontend rails app.
 
 
 #### Dog Days Production Links:
-Live App:
+Live App: https://dog-days.herokuapp.com/
 
 Backend API: https://dog-days-api.herokuapp.com/api/v1/dogs
 
@@ -56,6 +57,22 @@ GET /api/v1/users?email=justin@email.com
     "password_digest": "$2a$10$c2y3B4moPDfBRd48/j26t.W3ecROnpLOjoYoA.Wh5TXngdr6GIINK",
     "created_at": "2019-04-17T05:29:44.978Z",
     "updated_at": "2019-04-17T05:29:44.978Z"
+}
+```
+
+##### Create a Dog for a User:
+You will need to pass in the params of "user_id", "breed" & "image" into the URL to create a dog successfully.
+
+```
+POST /api/v1/dogs?user_id=1&breed=Labrador&image=https://images.dog.ceo/breeds/labrador/n02099712_6901.jpg
+
+{
+    "id": 7,
+    "user_id": 1,
+    "breed": "Labrador",
+    "image": "https://images.dog.ceo/breeds/labrador/n02099712_6901.jpg",
+    "created_at": "2019-04-16T18:15:00.127Z",
+    "updated_at": "2019-04-16T18:15:00.127Z"
 }
 ```
 
@@ -114,22 +131,6 @@ GET /api/v1/dogs?user_id=1
         "updated_at": "2019-04-16T18:39:53.623Z"
     }
 ]
-```
-
-##### Create a Dog for a User:
-You will need to pass in the params of "user_id", "breed" & "image" into the URL to create a dog successfully.
-
-```
-POST /api/v1/dogs?user_id=1&breed=Labrador&image=https://images.dog.ceo/breeds/labrador/n02099712_6901.jpg
-
-{
-    "id": 7,
-    "user_id": 1,
-    "breed": "Labrador",
-    "image": "https://images.dog.ceo/breeds/labrador/n02099712_6901.jpg",
-    "created_at": "2019-04-16T18:15:00.127Z",
-    "updated_at": "2019-04-16T18:15:00.127Z"
-}
 ```
 
 ##### Delete a Dog for a User:
@@ -210,6 +211,7 @@ To deploy this app through Heroku as we have, you can follow these [instructions
 * [Ruby - Version 2.4.5](https://ruby-doc.org/core-2.4.5/) - Base code language
 * [Rails - Version 5.2.2](https://guides.rubyonrails.org/v5.2/) - Web framework used
 * [Faraday](https://github.com/lostisland/faraday) - HTTP Client for API calls
+* [Dog API](https://dog.ceo/dog-api/) - API used to get dog images
 * [RSpec](http://rspec.info/documentation/) - Testing Suite
 * [TravisCI](https://travis-ci.org/) - Used for continuous integration on frontend & backend
 * [Heroku](https://www.heroku.com/) - Used to deploy to production for frontend & backend
@@ -226,7 +228,7 @@ I will review the request and merge it into master if it is approved.
 
 ## Author
 
-* **Justin Mauldin** - *Team member* - [Justin's Github](https://github.com/justinmauldin7)
+* **Justin Mauldin** - [Justin's Github](https://github.com/justinmauldin7)
 
 
 ## Acknowledgments
