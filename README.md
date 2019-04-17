@@ -31,7 +31,23 @@ https://github.com/justinmauldin7/Dog_Days_BE/projects/1
 You will need to pass in the params of "name", "email", "password" & "password_confirmation" into the URL to create a user successfully.
 
 ```
-POST api/v1/users?name=Justin&email=justin@email.com&password=password&password_confirmation=password
+POST /api/v1/users?name=Justin&email=justin@email.com&password=password&password_confirmation=password
+
+{
+    "id": 1,
+    "name": "Justin",
+    "email": "justin@email.com",
+    "password_digest": "$2a$10$c2y3B4moPDfBRd48/j26t.W3ecROnpLOjoYoA.Wh5TXngdr6GIINK",
+    "created_at": "2019-04-17T05:29:44.978Z",
+    "updated_at": "2019-04-17T05:29:44.978Z"
+}
+```
+
+##### Get a Single User:
+You will need to know and pass in the email address of the user you are looking to find into the URL for a successful response.
+
+```
+GET /api/v1/users?email=justin@email.com
 
 {
     "id": 1,
