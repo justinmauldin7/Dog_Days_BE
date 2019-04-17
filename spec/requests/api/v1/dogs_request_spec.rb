@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe "API Homepage" do
-  it "can navigate to the homepage" do
+describe "/dogs" do
+  it "can return to a users dogs" do
     user_1 = User.create(name: "Justin", email: "justin@gmail.com", password: "123")
 
     Dog.create(user: user_1, breed: "Labrador", image: "https://images.dog.ceo/breeds/labrador/n02099712_6901.jpg")
